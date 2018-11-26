@@ -60,7 +60,7 @@ function setDynamic() {
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].image5.Url = "https://s0.2mdn.net/ads/richmedia/studio/29136065/29136065_20180912151540071_interim.png";
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].image6 = "";
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].image7 = "";
-    devDynamicContent.PureStorageDynamicCreative18_300x250[0].text1 = "1";
+    devDynamicContent.PureStorageDynamicCreative18_300x250[0].text1 = "hello 1";
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].text2 = "<span id='times'></span><sup>1</sup>";
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].text3 = "3";
     devDynamicContent.PureStorageDynamicCreative18_300x250[0].text4 = "4";

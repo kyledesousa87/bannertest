@@ -22,7 +22,34 @@ var gulp = require('gulp'),
 // ------------ Development Tasks -------------
 // Compile Sass into CSS
 
+// Using panini, template, page and partial files are combined to form html markup
+gulp.task('compile-html', function () {
+    return gulp.src('/**/*.html')
+        .pipe(panini({
+            root: '/',
+        }))
+        .pipe(gulp.dest('/'));
+    console.log('Compiling partials with Panini');
+});
 
+
+// Compile Sass into CSS
+gulp.task('sass', function () {
+    return gulp.src(['/*.scss'])
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            sourceComments: 'map',
+            sourceMap: 'sass',
+            outputStyle: 'nested'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer('last 4 versions'))
+        //.pipe(cssnano()) // Use cssnano to minify CSS
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("/"))
+        .pipe(browserSync.stream());
+    console.log('Compiling scss');
+});
 
 
 // Watches for changes while gulp is running
@@ -42,3 +69,10 @@ gulp.task('watch', function () {
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
 gulp.task('default', ['watch']);
+
+
+// Creates production ready assets in dist folder
+gulp.task('build', function () {
+    console.log('Building production ready assets');
+    runSequence( 'sass', ['compile-html'])
+});
