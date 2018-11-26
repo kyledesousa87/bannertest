@@ -1,0 +1,12 @@
+/* Webfont: ProximaNova-Bold */@font-face {
+    font-family: 'ProximaNova';
+    src: url('Proxima Nova Bold.eot'); /* IE9 Compat Modes */
+    src: url('Proxima Nova Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Proxima Nova Bold.woff') format('woff'), /* Modern Browsers */
+         url('Proxima Nova Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Proxima Nova Bold.svg#ProximaNova-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
